@@ -3,7 +3,7 @@ In this project, a number of CPU Scheduling Algorithms found in most operating s
 
 ## Table of Contents
 - [CPU-Scheduling-Algorithms]
-  - [Algorithms]
+  - [Algorithms](#algorithms)
     - [First Come First Serve (FCFS)]
     - [Round Robin with varying time quantum (RR)]
     - [Shortest Remaining Time (SRT)]
@@ -16,8 +16,8 @@ In this project, a number of CPU Scheduling Algorithms found in most operating s
  <strong>Description:</strong> Processes are scheduled according to their arrival times. It is non-preemptive, meaning once a process starts execution, it runs to completion.
 
 <strong>Implementation:</strong><br>
-            Start with the first process in the list (sorted by arrival time).<br>
-            For each process:<br>
+            Start with the first process in the list (sorted by arrival time).<be>
+            <u>For each process</u>:<br>
             - Calculate its finish time as the current time plus its service time.<br>
             - Calculate its turnaround time (finish time - arrival time) and normalized turnaround time (turnaround time/service time).<br>
             - Mark its execution timeline with * during its execution and . for waiting.<br>
@@ -29,7 +29,7 @@ In this project, a number of CPU Scheduling Algorithms found in most operating s
 
 <strong>Implementation:</strong><br>
             - Use a queue to manage processes. Enqueue processes as they arrive.<br>
-            - For each time unit:<br>
+            <u>For each process</u>:<br>
             - Dequeue a process and execute it for the quantum or until completion.<br>
             - Update the remaining service time for the process.<br>
             - If the process is not completed, re-enqueue it with the updated service time.<br>
@@ -42,7 +42,7 @@ In this project, a number of CPU Scheduling Algorithms found in most operating s
 
 <strong>Implementation:</strong><br>
             - Use a priority queue to keep track of processes, sorted by their remaining service time.<br>
-            - For each time unit:<br>
+            <u>For each process</u>:<br>
             - Add newly arrived processes to the priority queue.<br>
             - Execute the process with the shortest remaining service time.<br>
             - Update its remaining time and mark the timeline with *.<br>
@@ -56,7 +56,7 @@ In this project, a number of CPU Scheduling Algorithms found in most operating s
 
  <strong>Implementation:</strong><br>
             - Use a vector of tuples to store each process's priority level, index, and total waiting time.<br>
-            - For each time unit:<br>
+            <u>For each process</u>:<br>
             - Add newly arrived processes to the vector.<br>
             - Increment the priority level of waiting processes (aging) and reset the priority for the currently executing process.<br>
             - Sort the processes by priority (and waiting time for ties).<br>
