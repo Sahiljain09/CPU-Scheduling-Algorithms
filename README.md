@@ -7,7 +7,7 @@ In this project, a number of CPU Scheduling Algorithms found in most operating s
     - [First Come First Serve (FCFS)](#first-come-first-serve-fcfs)
     - [Round Robin with varying time quantum (RR)](#round-robin-with-varying-time-quantum-rr)
     - [Shortest Remaining Time (SRT)](#shortest-remaining-time-srt)
-    - [Aging](#aging))
+    - [Aging](#aging)
   - [Input Format](#intput-format)
 
 ## Algorithms
