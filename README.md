@@ -13,31 +13,34 @@ In this project, a number of CPU Scheduling Algorithms found in most operating s
 ## Algorithms
 
 ### First Come First Serve (FCFS)
-Description: Processes are scheduled in the order of their arrival times. It is non-preemptive, meaning once a process starts execution, it runs to completion.
-Implementation:
+<b>Description:</b> Processes are scheduled according to their arrival times. It is non-preemptive, meaning once a process starts execution, it runs to completion.
+
+<b>Implementation:</b>
 Start with the first process in the list (sorted by arrival time).
-For each process:
+<u>For each process:</u>
 Calculate its finish time as the current time plus its service time.
-Calculate its turnaround time (finish time - arrival time) and normalized turnaround time (turnaround time / service time).
+Calculate its turnaround time (finish time - arrival time) and normalized turnaround time (turnaround time/service time).
 Mark its execution timeline with * during its execution and . for waiting.
 Update the current time after executing each process.
 Function: firstComeFirstServe()
 
 ### Round Robin with varying time quantum (RR)
-Description: Processes are executed in a circular order for a fixed quantum. If a process doesn’t complete within the quantum, it goes back to the ready queue.
-Implementation:
+<b>Description:</b> Processes are executed in a circular order for a fixed quantum. If a process doesn’t complete within the quantum, it returns to the ready queue.
+
+<b>Implementation:</b>
 Use a queue to manage processes. Enqueue processes as they arrive.
 For each time unit:
 Dequeue a process and execute it for the quantum or until completion.
 Update the remaining service time for the process.
 If the process is not completed, re-enqueue it with the updated service time.
 Mark the timeline with * during execution and handle arrivals dynamically.
-Calculate metrics such as finish time, turnaround time, and normalized turnaround time once the process completes.
+Calculate metrics such as finish time, turnaround time, and normalized turnaround time once the process is completed.
 Function: roundRobin(int originalQuantum)
   
 ### Shortest Remaining Time (SRT)
-Description: The process with the shortest remaining service time is executed first. This is a preemptive version of Shortest Job Next (SJN).
-Implementation:
+<b>Description:</b> The process with the shortest remaining service time is executed first. This is a preemptive version of Shortest Job Next (SJN).
+
+<b>Implementation:</b>
 Use a priority queue to keep track of processes, sorted by their remaining service time.
 For each time unit:
 Add newly arrived processes to the priority queue.
@@ -49,8 +52,9 @@ Function: shortestRemainingTime()
 
 ### Aging
 
-Description: Aging prevents starvation by gradually increasing the priority of waiting processes. Higher priority processes are executed first.
-Implementation:
+<b>Description:</b> Aging prevents starvation by gradually increasing the priority of waiting processes. Higher priority processes are executed first.
+
+<b>Implementation:</b>
 Use a vector of tuples to store each process's priority level, index, and total waiting time.
 For each time unit:
 Add newly arrived processes to the vector.
