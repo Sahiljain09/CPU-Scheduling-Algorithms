@@ -13,16 +13,16 @@ In this project, a number of CPU Scheduling Algorithms found in most operating s
 ## Algorithms
 
 ### First Come First Serve (FCFS)
-<b>Description:</b> Processes are scheduled according to their arrival times. It is non-preemptive, meaning once a process starts execution, it runs to completion.
+ <strong>Description:</strong> Processes are scheduled according to their arrival times. It is non-preemptive, meaning once a process starts execution, it runs to completion.
 
-<b>Implementation:</b>
-Start with the first process in the list (sorted by arrival time).
-<u>For each process:</u>
-Calculate its finish time as the current time plus its service time.
-Calculate its turnaround time (finish time - arrival time) and normalized turnaround time (turnaround time/service time).
-Mark its execution timeline with * during its execution and . for waiting.
-Update the current time after executing each process.
-Function: firstComeFirstServe()
+<strong>Implementation:</strong><br>
+            Start with the first process in the list (sorted by arrival time).<br>
+            For each process:<br>
+            - Calculate its finish time as the current time plus its service time.<br>
+            - Calculate its turnaround time (finish time - arrival time) and normalized turnaround time (turnaround time/service time).<br>
+            - Mark its execution timeline with * during its execution and . for waiting.<br>
+            - Update the current time after executing each process.
+            - Function: <code>firstComeFirstServe()</code>
 
 ### Round Robin with varying time quantum (RR)
 <b>Description:</b> Processes are executed in a circular order for a fixed quantum. If a process doesn’t complete within the quantum, it returns to the ready queue.
